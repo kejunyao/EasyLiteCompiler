@@ -9,7 +9,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.auto.service/auto-service
     implementation 'com.google.auto.service:auto-service:1.0-rc4'
     // https://square.github.io/javapoet/1.x/javapoet/
-    implementation project(':EasyLite-annotation')
+    implementation 'com.github.kejunyao:EasyLiteAnnotation:0.1.1'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
