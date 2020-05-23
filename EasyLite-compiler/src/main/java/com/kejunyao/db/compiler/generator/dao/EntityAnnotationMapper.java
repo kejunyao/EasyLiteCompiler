@@ -1,11 +1,11 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
 import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import com.kejunyao.db.annotation.ColumnConstraint;
 import com.kejunyao.db.annotation.DaoMode;
 import com.kejunyao.db.annotation.Entity;
@@ -16,15 +16,15 @@ import java.util.Set;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.type.TypeMirror;
-import static com.kejunyao.db.generator.Constant.PACKAGE_ANDROID_CONTENT;
-import static com.kejunyao.db.generator.Constant.PACKAGE_DAO_CORE;
-import static com.kejunyao.db.generator.dao.SpecUtils.METHOD_TO_MANY;
-import static com.kejunyao.db.generator.dao.SpecUtils.METHOD_TO_ONE;
-import static com.kejunyao.db.generator.dao.SpecUtils.OBJECT_SEPARATOR;
-import static com.kejunyao.db.generator.dao.SpecUtils.PARAM_NAME_CURSOR;
-import static com.kejunyao.db.generator.dao.SpecUtils.PARAM_NAME_ENTITY;
-import static com.kejunyao.db.generator.dao.SpecUtils.THREE_FORMAT_TAB;
-import static com.kejunyao.db.generator.dao.SpecUtils.VARIABLE_CURSOR_NAME;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_ANDROID_CONTENT;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_DAO_CORE;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.METHOD_TO_MANY;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.METHOD_TO_ONE;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.OBJECT_SEPARATOR;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.PARAM_NAME_CURSOR;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.PARAM_NAME_ENTITY;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.THREE_FORMAT_TAB;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.VARIABLE_CURSOR_NAME;
 
 /**
  * 实体注解Mapper

@@ -1,4 +1,4 @@
-package com.kejunyao.db.generator;
+package com.kejunyao.db.compiler.generator;
 
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;

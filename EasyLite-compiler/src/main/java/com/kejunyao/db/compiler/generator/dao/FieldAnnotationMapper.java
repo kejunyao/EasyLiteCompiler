@@ -1,10 +1,10 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import java.util.Set;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.type.TypeMirror;
-import static com.kejunyao.db.generator.dao.SpecUtils.PARAM_NAME_ENTITY;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.PARAM_NAME_ENTITY;
 import static javax.lang.model.type.TypeKind.BOOLEAN;
 
 /**

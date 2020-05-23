@@ -1,4 +1,4 @@
-package com.kejunyao.db.generator;
+package com.kejunyao.db.compiler.generator;
 
 import java.util.Set;
 import javax.annotation.processing.RoundEnvironment;

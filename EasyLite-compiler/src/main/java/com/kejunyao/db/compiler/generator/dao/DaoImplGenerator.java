@@ -1,15 +1,15 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
 import com.google.auto.common.SuperficialValidation;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import com.kejunyao.db.annotation.Association;
 import com.kejunyao.db.annotation.Column;
 import com.kejunyao.db.annotation.Entity;
-import com.kejunyao.db.generator.AbstractGenerator;
+import com.kejunyao.db.compiler.generator.AbstractGenerator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -18,8 +18,8 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
-import static com.kejunyao.db.generator.Constant.PACKAGE_DAO_CORE;
-import static com.kejunyao.db.generator.Constant.PACKAGE_GENERATOR_CLASS;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_DAO_CORE;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_GENERATOR_CLASS;
 
 /**
  * DAO实现类生成器

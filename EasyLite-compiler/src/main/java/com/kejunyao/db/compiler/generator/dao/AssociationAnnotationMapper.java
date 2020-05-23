@@ -1,7 +1,7 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
 import com.squareup.javapoet.MethodSpec;
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import com.kejunyao.db.annotation.Association;
 import com.kejunyao.db.annotation.AssociationType;
 import java.util.LinkedHashSet;

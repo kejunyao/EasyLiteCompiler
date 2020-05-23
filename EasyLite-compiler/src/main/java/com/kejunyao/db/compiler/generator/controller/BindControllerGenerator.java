@@ -1,13 +1,13 @@
-package com.kejunyao.db.generator.controller;
+package com.kejunyao.db.compiler.generator.controller;
 
 import com.google.auto.common.SuperficialValidation;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import com.kejunyao.db.annotation.Entity;
-import com.kejunyao.db.generator.AbstractGenerator;
-import com.kejunyao.db.generator.dao.EntityAnnotationMapper;
+import com.kejunyao.db.compiler.generator.AbstractGenerator;
+import com.kejunyao.db.compiler.generator.dao.EntityAnnotationMapper;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,9 +18,9 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
-import static com.kejunyao.db.generator.Constant.PACKAGE_ANDROID_CONTENT;
-import static com.kejunyao.db.generator.Constant.PACKAGE_DAO_CORE;
-import static com.kejunyao.db.generator.Constant.PACKAGE_GENERATOR_CLASS;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_ANDROID_CONTENT;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_DAO_CORE;
+import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_GENERATOR_CLASS;
 
 /**
  * 生成{@link Entity#bindDatabaseController()}对应的Controller

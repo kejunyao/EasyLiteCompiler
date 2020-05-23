@@ -1,11 +1,11 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
-import com.kejunyao.db.Utils;
+import com.kejunyao.db.compiler.Utils;
 import com.kejunyao.db.annotation.Column;
 import com.kejunyao.db.annotation.ColumnConstraint;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
-import static com.kejunyao.db.generator.dao.SpecUtils.PARAM_NAME_CURSOR;
+import static com.kejunyao.db.compiler.generator.dao.SpecUtils.PARAM_NAME_CURSOR;
 
 /**
  * 数据库表Column对应的Mapper

@@ -1,4 +1,4 @@
-package com.kejunyao.db;
+package com.kejunyao.db.compiler;
 
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;

@@ -1,11 +1,11 @@
-package com.kejunyao.db.generator.dao;
+package com.kejunyao.db.compiler.generator.dao;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
-import com.kejunyao.db.Utils;
-import com.kejunyao.db.generator.Constant;
+import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.generator.Constant;
 import java.util.Map;
 import javax.lang.model.element.Modifier;
 
