@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.kejunyao'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // https://github.com/square/javapoet
+    implementation 'com.squareup:javapoet:1.10.0'
+    // https://mvnrepository.com/artifact/com.google.auto.service/auto-service
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+    // https://square.github.io/javapoet/1.x/javapoet/
+    implementation project(':EasyLite-annotation')
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7

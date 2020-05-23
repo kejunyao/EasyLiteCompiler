@@ -1,0 +1,4 @@
+rootProject.name='EasyLiteCompiler'
+include ':app'
+include ':EasyLite-annotation'
+include ':EasyLite-compiler'
