@@ -10,7 +10,7 @@ public interface Constant {
     /** Android android.content包名 */
     String PACKAGE_ANDROID_CONTENT = "android.content";
     /** easydao-core核心库的主包名 */
-    String PACKAGE_DAO_CORE = "com.wandu.db";
+    String PACKAGE_DAO_CORE = "com.kejunyao.db";
     /** 生成{$Entity}DaoImpl实现类的包名 */
-    String PACKAGE_GENERATOR_CLASS = "com.wandu.db.impl";
+    String PACKAGE_GENERATOR_CLASS = "com.kejunyao.db.impl";
 }
