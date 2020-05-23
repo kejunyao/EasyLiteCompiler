@@ -1,6 +1,6 @@
 package com.kejunyao.db.compiler.generator.dao;
 
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import java.util.Set;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.type.TypeMirror;
@@ -45,12 +45,12 @@ public class FieldAnnotationMapper {
                 if (filed.startsWith("is")) {
                     String thirdLetter = filed.substring(2, 3);
                     if (thirdLetter.equals(thirdLetter.toUpperCase())) {
-                        return Utils.concat("set", filed.substring(2), '(', param, ')');
+                        return CompilerUtils.concat("set", filed.substring(2), '(', param, ')');
                     }
                 }
             }
         }
-        return Utils.concat("set", firstUpperCase(), '(', param, ')');
+        return CompilerUtils.concat("set", firstUpperCase(), '(', param, ')');
     }
 
     /**

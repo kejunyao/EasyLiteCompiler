@@ -1,7 +1,7 @@
 package com.kejunyao.db.compiler.generator.dao;
 
 import com.squareup.javapoet.MethodSpec;
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.annotation.Association;
 import com.kejunyao.db.annotation.AssociationType;
 import java.util.LinkedHashSet;
@@ -39,9 +39,9 @@ public class AssociationAnnotationMapper extends FieldAnnotationMapper {
      * @return {@link AssociationAnnotationMapper}
      */
     static AssociationAnnotationMapper parseElement(Element element) {
-        Utils.assertIllegalArgument(
+        CompilerUtils.assertIllegalArgument(
                 element.getModifiers().contains(Modifier.STATIC),
-                Utils.concat("Can not support static modifier: ", element.getSimpleName().toString(), ", modifiers: ", element.getModifiers())
+                CompilerUtils.concat("Can not support static modifier: ", element.getSimpleName().toString(), ", modifiers: ", element.getModifiers())
         );
         AssociationAnnotationMapper associationMapper = new AssociationAnnotationMapper();
         associationMapper.modifiers = element.getModifiers();
@@ -66,7 +66,7 @@ public class AssociationAnnotationMapper extends FieldAnnotationMapper {
     private final Set<String> filedSet = new LinkedHashSet<>();
     private void parseWhere(final String where) {
         filedSet.clear();
-        if (Utils.isEmpty(where)) {
+        if (CompilerUtils.isEmpty(where)) {
             this.where = null;
             return;
         }

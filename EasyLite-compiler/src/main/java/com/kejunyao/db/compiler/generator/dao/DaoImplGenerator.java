@@ -5,7 +5,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.annotation.Association;
 import com.kejunyao.db.annotation.Column;
 import com.kejunyao.db.annotation.Entity;
@@ -29,7 +29,7 @@ import static com.kejunyao.db.compiler.generator.Constant.PACKAGE_GENERATOR_CLAS
  */
 public class DaoImplGenerator extends AbstractGenerator {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
     /** easydao-core核心库中com.wandu.db.AbstractSQLiteDaoImpl类的类名称 */
     private static final String CLASS_NAME_ABSTRACT_SQLITE_DAO_IMPL = "AbstractSQLiteDaoImpl";
     /** easydao-core核心库中com.wandu.db.AbstractSQLiteDaoImpl类的类名称 */
@@ -139,7 +139,7 @@ public class DaoImplGenerator extends AbstractGenerator {
         typeBuilder.addMethods(entityMapper.toEntity(entityMap));
         typeBuilder.addMethod(entityMapper.toContentValues());
         TypeSpec daoImpl = typeBuilder.build();
-        Utils.writeJavaFile(environment.getFiler(), PACKAGE_GENERATOR_CLASS, daoImpl);
+        CompilerUtils.writeJavaFile(environment.getFiler(), PACKAGE_GENERATOR_CLASS, daoImpl);
     }
 
     private String daoImplSuperClass(boolean isProvider) {

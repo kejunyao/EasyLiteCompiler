@@ -6,14 +6,14 @@ import java.io.IOException;
 import javax.annotation.processing.Filer;
 
 /**
- * easy-dao通用工具类
+ * EasyLite通用工具类
  *
  * @author kejunyao
  * @since 2019年12月06日
  */
-public final class Utils {
+public final class CompilerUtils {
 
-    private Utils() {
+    private CompilerUtils() {
     }
 
     /**

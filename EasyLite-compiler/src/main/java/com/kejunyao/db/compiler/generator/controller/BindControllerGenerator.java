@@ -4,7 +4,7 @@ import com.google.auto.common.SuperficialValidation;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.annotation.Entity;
 import com.kejunyao.db.compiler.generator.AbstractGenerator;
 import com.kejunyao.db.compiler.generator.dao.EntityAnnotationMapper;
@@ -55,7 +55,7 @@ public class BindControllerGenerator extends AbstractGenerator {
             if (!SuperficialValidation.validateElement(element)) continue;
             Entity entity = element.getAnnotation(Entity.class);
             String bindController = entity.bindDatabaseController();
-            if (Utils.isEmpty(bindController)) {
+            if (CompilerUtils.isEmpty(bindController)) {
                 continue;
             }
             HashSet<EntityAnnotationMapper> entitySet = entityMap.get(bindController);
@@ -89,6 +89,6 @@ public class BindControllerGenerator extends AbstractGenerator {
             builder.addStatement("addDao(new $T())", ClassName.get(PACKAGE_GENERATOR_CLASS, entityMapper.daoImplClassName()));
         }
         typeBuilder.addMethod(builder.build());
-        Utils.writeJavaFile(environment.getFiler(), PACKAGE_DAO_CORE, typeBuilder.build());
+        CompilerUtils.writeJavaFile(environment.getFiler(), PACKAGE_DAO_CORE, typeBuilder.build());
     }
 }

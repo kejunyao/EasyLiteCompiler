@@ -4,7 +4,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.compiler.generator.Constant;
 import java.util.Map;
 import javax.lang.model.element.Modifier;
@@ -52,7 +52,7 @@ final class SpecUtils {
                 builder.append(columnMapper.filed).append(" = ").append(columnMapper.getCursorColumn())
                         .append(booleanString);
             } else {
-                builder.append(columnMapper.setter(Utils.concat(columnMapper.getCursorColumn(), booleanString)));
+                builder.append(columnMapper.setter(CompilerUtils.concat(columnMapper.getCursorColumn(), booleanString)));
             }
             builder.append(";\n");
         }

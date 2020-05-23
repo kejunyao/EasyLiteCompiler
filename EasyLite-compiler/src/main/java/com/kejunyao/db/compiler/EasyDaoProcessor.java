@@ -23,7 +23,7 @@ import javax.tools.Diagnostic;
 @AutoService(Processor.class)
 public class EasyDaoProcessor extends AbstractProcessor {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     private Messager messager;
 

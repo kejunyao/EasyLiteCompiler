@@ -1,6 +1,6 @@
 package com.kejunyao.db.compiler.generator.dao;
 
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.annotation.Column;
 import com.kejunyao.db.annotation.ColumnConstraint;
 import javax.lang.model.element.Element;
@@ -31,9 +31,9 @@ class ColumnAnnotationMapper extends FieldAnnotationMapper {
      * @return {@link ColumnAnnotationMapper}
      */
     static ColumnAnnotationMapper parseElement(Element element) {
-        Utils.assertIllegalArgument(
+        CompilerUtils.assertIllegalArgument(
                 element.getModifiers().contains(Modifier.STATIC),
-                Utils.concat("Can not support static modifier: ", element.getSimpleName().toString(), ", modifiers: ", element.getModifiers())
+                CompilerUtils.concat("Can not support static modifier: ", element.getSimpleName().toString(), ", modifiers: ", element.getModifiers())
         );
         ColumnAnnotationMapper columnMapper = new ColumnAnnotationMapper();
         columnMapper.modifiers = element.getModifiers();

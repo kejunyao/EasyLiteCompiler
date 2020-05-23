@@ -5,7 +5,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
-import com.kejunyao.db.compiler.Utils;
+import com.kejunyao.db.compiler.CompilerUtils;
 import com.kejunyao.db.annotation.ColumnConstraint;
 import com.kejunyao.db.annotation.DaoMode;
 import com.kejunyao.db.annotation.Entity;
@@ -94,7 +94,7 @@ public class EntityAnnotationMapper {
         entityName = element.getSimpleName().toString();
         bindController = entity.bindDatabaseController();
         String tableName = entity.tableName();
-        if (Utils.isEmpty(tableName)) {
+        if (CompilerUtils.isEmpty(tableName)) {
             tableName = element.getSimpleName().toString();
         }
         this.tableName = tableName;
@@ -256,7 +256,7 @@ public class EntityAnnotationMapper {
             }
         }
         builder.append(OBJECT_SEPARATOR).append("constraint(\"").append(columnMapper.constraint.value()).append("\")");
-        if (!Utils.isEmpty(columnMapper.defaultValue)) {
+        if (!CompilerUtils.isEmpty(columnMapper.defaultValue)) {
             builder.append(OBJECT_SEPARATOR).append("defaultValue(\"").append(columnMapper.defaultValue).append("\")");
         }
     }
