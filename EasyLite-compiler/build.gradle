@@ -11,6 +11,7 @@ dependencies {
     // https://square.github.io/javapoet/1.x/javapoet/
     implementation 'com.github.kejunyao:EasyLiteAnnotation:0.1.1'
 }
-
-sourceCompatibility = JavaVersion.VERSION_1_7
-targetCompatibility = JavaVersion.VERSION_1_7
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}

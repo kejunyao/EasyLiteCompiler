@@ -21,7 +21,7 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
 @AutoService(Processor.class)
-public class EasyDaoProcessor extends AbstractProcessor {
+public class EasyLiteProcessor extends AbstractProcessor {
 
     private static final boolean DEBUG = true;
 
@@ -76,7 +76,7 @@ public class EasyDaoProcessor extends AbstractProcessor {
         }
         processed = true;
         if (DEBUG) {
-            printMessage("EasyDaoProcessor#process");
+            printMessage("EasyLiteProcessor#process");
         }
         for (IGenerator generator : generators) {
             generator.generate(annotations, env);
